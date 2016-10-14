@@ -35,13 +35,18 @@
         return res;
     }
     
+    String.prototype.replaceAt = function (index, character) {
+        return this.substr(0, index) + character + this.substr(index + character.length);
+    };
+    
     function translit(str) {
         var transliterations1 = {}, transliterations2 = {},
             idx,
             key1, key2,
             key1Low, key2Low,
             transliteration = '',
-            replaced = false;
+            replaced = false,
+            newChar;
         
         if (debugMode) { console.log("🛈 String to translit: " + str); }
         
@@ -122,7 +127,8 @@
                     idx += 1;
                     replaced = true;
                 } else if (transliterations2.hasOwnProperty(key2Low)) {
-                    transliteration += transliterations2[key2Low].toUpperCase();
+                    newChar = transliterations2[key2Low];
+                    transliteration += newChar.replaceAt(0, newChar[0].toUpperCase());
                     idx += 1;
                     replaced = true;
                 }
@@ -132,7 +138,8 @@
                 if (transliterations1.hasOwnProperty(key1)) {
                     transliteration += transliterations1[key1];
                 } else if (transliterations1.hasOwnProperty(key1Low)) {
-                    transliteration += transliterations1[key1Low].toUpperCase();
+                    newChar = transliterations1[key1Low];
+                    transliteration += newChar.replaceAt(0, newChar[0].toUpperCase());
                 } else {
                     transliteration += str[idx];
                 }
