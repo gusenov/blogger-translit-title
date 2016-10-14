@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Blogger Title Translit",
-    "version": "0.0.0.2",
+    "version": "0.0.0.3",
     
     "description": "BloggerTitleTranslit is a Chrome extension that converts Cyrillic title in Latin URL.",    
     "icons": { "16": "icon16.png",
