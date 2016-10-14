@@ -128,12 +128,14 @@
                 }
             }
             
-            if (!replaced && transliterations1.hasOwnProperty(key1)) {
-                transliteration += transliterations1[key1];
-            } else if (transliterations1.hasOwnProperty(key1Low)) {
-                transliteration += transliterations1[key1Low].toUpperCase();
-            } else {
-                transliteration += str[idx];
+            if (!replaced) {
+                if (transliterations1.hasOwnProperty(key1)) {
+                    transliteration += transliterations1[key1];
+                } else if (transliterations1.hasOwnProperty(key1Low)) {
+                    transliteration += transliterations1[key1Low].toUpperCase();
+                } else {
+                    transliteration += str[idx];
+                }
             }
         }
         
