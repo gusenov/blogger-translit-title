@@ -25,10 +25,18 @@
         }
     }
     
+    function isNumber(value) {
+        if (!isNaN(parseInt(value, 10))) {
+            // Is a number
+            return true;
+        }
+        return false;
+    }
+    
     function removeSpecials(str) {
         var lower = str.toLowerCase(), upper = str.toUpperCase(), res = "", i;
         for (i = 0; i < lower.length; i += 1) {
-            if (lower[i] !== upper[i] || lower[i] === ' ') {
+            if (isNumber(lower[i]) || lower[i] !== upper[i] || lower[i] === ' ' || lower[i] === '-') {
                 res += str[i];
             }
         }
