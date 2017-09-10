@@ -6,11 +6,13 @@
 
 Файлы и папки относящиеся непосредственно к расширению для браузера:
 
-- [icon16.png](icon16.png)
-- [icon48.png](icon48.png)
-- [icon128.png](icon128.png)
+- [images/icon16.png](images/icon16.png)
+- [images/icon32.png](images/icon16.png)
+- [images/icon48.png](images/icon48.png)
+- [images/icon128.png](images/icon128.png)
 - [manifest.json](manifest.json)
 - [translit.js](translit.js)
+- [background.js](background.js)
 
 # Сборка
 

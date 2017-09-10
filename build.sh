@@ -16,6 +16,7 @@ zip --quiet -r $release \
                 "images/icon48.png" \
                 "images/icon128.png" \
                 "manifest.json" \
-                "translit.js"
+                "translit.js" \
+                "background.js"
 
 echo $release
