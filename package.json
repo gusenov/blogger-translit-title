@@ -1,0 +1,9 @@
+{
+  "description": "Chrome extension that converts Cyrillic title in Latin URL.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusenov/blogger-translit-title.git"
+  },
+  "homepage": "https://github.com/gusenov/blogger-translit-title#readme",
+  "license": "MIT"
+}
